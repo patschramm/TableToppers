@@ -1,5 +1,6 @@
 class Api::UsersController < ApplicationController
   before_action :require_login, only: [:show, :index]
+  skip_before_action :verify_authenticity_token
 
   def index
     @users = User.all
