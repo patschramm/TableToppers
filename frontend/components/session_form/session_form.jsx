@@ -34,54 +34,95 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to TableToppers!
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-          <div className="login-form">
+    if (this.props.formType === "login") {
+      return (
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            Welcome to TableToppers!
             <br />
-            <label>
-              Username:
+            Please {this.props.formType} or {this.props.navLink}
+            {this.renderErrors()}
+            <div className="login-form">
+              <br />
+              <label>
+                Username:
+                <input
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.update("username")}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>
+                Password:
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  className="login-input"
+                />
+              </label>
+              <br />
               <input
-                type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-                className="login-input"
+                className="session-submit"
+                type="submit"
+                value={this.props.formType}
               />
-            </label>
+            </div>
+          </form>
+        </div>
+      );
+    } else {
+      return (
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            Welcome to TableToppers!
             <br />
-            <label>
-              E-mail:
+            Please {this.props.formType} or {this.props.navLink}
+            {this.renderErrors()}
+            <div className="login-form">
+              <br />
+              <label>
+                Username:
+                <input
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.update("username")}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>
+                E-mail:
+                <input
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>
+                Password:
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  className="login-input"
+                />
+              </label>
+              <br />
               <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                className="login-input"
+                className="session-submit"
+                type="submit"
+                value={this.props.formType}
               />
-            </label>
-            <br />
-            <label>
-              Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <input
-              className="session-submit"
-              type="submit"
-              value={this.props.formType}
-            />
-          </div>
-        </form>
-      </div>
-    );
+            </div>
+          </form>
+        </div>
+      );
+    }
   }
 }
 
