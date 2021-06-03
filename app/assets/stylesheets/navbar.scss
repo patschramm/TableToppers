@@ -1,0 +1,47 @@
+.navbar-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+
+.navbar-wrapper a {
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background: transparent;
+
+}
+
+.signup-bttn:hover {
+    background-color: white;
+}
+
+
+.signup-bttn {
+    border: solid black 2px;
+    color: #666;
+}
+
+.login-bttn {
+    color: #666;
+}
+
+.login-bttn:hover {
+    border-bottom: solid black 2px;
+    border-radius: 0px;
+}
+// login and signup form containers MOVE LATER
+.login-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-signup {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-form-box {
+    display: flex;
+    justify-content: center;
+}

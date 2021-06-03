@@ -40,7 +40,7 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-form-box">
             Welcome to TableToppers!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
+            New to TableToppers? {this.props.navLink}
             {this.renderErrors()}
             <div className="login-form">
               <br />
@@ -75,13 +75,12 @@ class SessionForm extends React.Component {
       );
     } else {
       return (
-        <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+        <div className="signup-form-container">
+          <form onSubmit={this.handleSubmit} className="signup-form-box">
             Welcome to TableToppers!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()}
-            <div className="login-form">
+            <div className="signup-form">
               <br />
               <label>
                 Username:
@@ -89,7 +88,7 @@ class SessionForm extends React.Component {
                   type="text"
                   value={this.state.username}
                   onChange={this.update("username")}
-                  className="login-input"
+                  className="signup-input"
                 />
               </label>
               <br />
@@ -120,6 +119,9 @@ class SessionForm extends React.Component {
               />
             </div>
           </form>
+          <div className="bottom-signup">
+            Already on TableToppers? {this.props.navLink}
+          </div>
         </div>
       );
     }

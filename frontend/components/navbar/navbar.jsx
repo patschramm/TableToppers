@@ -5,9 +5,9 @@ const Navbar = ({ currentUser, logout }) => {
 
     const login_links = () => (
       <nav className="login-signup">
-        <Link to="/login">Login</Link>
-        &nbsp;or&nbsp;
-        <Link to="/signup">Sign up!</Link>
+        <Link to="/login" className="login-bttn">Login</Link>
+        &nbsp;
+        <Link to="/signup" className="signup-bttn">Sign Up</Link>
       </nav>
     );
 
@@ -18,7 +18,7 @@ const Navbar = ({ currentUser, logout }) => {
     );
 
     return (
-        <nav className="nav-bar-wrapper">
+        <nav className="navbar-wrapper">
             { currentUser ? logout_bttn() : login_links() }
         </nav>
     )
