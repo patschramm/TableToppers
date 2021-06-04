@@ -9,15 +9,18 @@ import NavbarContainer from "./navbar/navbar_container"
 const App = () => (
   <div>
     <header>
-      <h1 className="logo-header">TableToppers</h1>
-      
+      <div></div>
+      <h1 className="logo-header">
+        <a href="/"> TableToppers </a>
+      </h1>
+
       <NavbarContainer />
       {/* <WelcomeContainer /> */}
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route exact path="/" component={WelcomeContainer}/>
+      <Route exact path="/" component={WelcomeContainer} />
       <Redirect to="/" />
     </Switch>
   </div>

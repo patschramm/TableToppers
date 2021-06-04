@@ -61,6 +61,16 @@ header {
 
 // THIS IS FOR THE LOGO HEADER
 
-.logo-header {
+.logo-header a {
+    text-decoration: none;
     font-size: 20px;
+    color: white;
+    display: flex;
+    margin-left: 81px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

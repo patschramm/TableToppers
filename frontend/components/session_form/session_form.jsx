@@ -8,6 +8,28 @@ class SessionForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
+  }
+
+  demoUser(e) {
+    e.preventDefault();
+    const demoUser = {
+      email: "test@example.com",
+      password: "password",
+    };
+    this.props.processForm(demoUser).then(() => this.props.history.push("/"));
+  }
+
+  insertDemoUser() {
+    if (this.props.formType === "login") {
+      return (
+        <div className="demo-login">
+          <h2>No Account? Try a demo!</h2>
+          <button onClick={this.demoUser}>demo</button>
+        </div>
+      );
+    }
+    return null
   }
 
   update(field) {
@@ -70,6 +92,7 @@ class SessionForm extends React.Component {
                 value={this.props.formType}
               />
             </div>
+            {this.insertDemoUser()}
           </form>
           <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
         </div>
@@ -119,9 +142,9 @@ class SessionForm extends React.Component {
                 value={this.props.formType}
               />
             </div>
-          <div className="bottom-signup">
-            Already on TableToppers? {this.props.navLink}
-          </div>
+            <div className="bottom-signup">
+              Already on TableToppers? {this.props.navLink}
+            </div>
           </form>
           <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
         </div>
