@@ -1,26 +1,18 @@
 import React from "react";
-import {Route, Switch, Redirect} from "react-router-dom"
+import { Route, Switch, Redirect } from "react-router-dom";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import WelcomeContainer from "./welcome/welcome_container";
 import { AuthRoute } from "../util/route_util";
-import NavbarContainer from "./navbar/navbar_container"
+import NavbarContainer from "./navbar/navbar_container";
+import Splash from "./splash/splash";
 
 const App = () => (
   <div>
-    <header>
-      <div></div>
-      <h1 className="logo-header">
-        <a href="/"> TableToppers </a>
-      </h1>
-
-      <NavbarContainer />
-      {/* <WelcomeContainer /> */}
-    </header>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route exact path="/" component={WelcomeContainer} />
+      <Route exact path="/" component={Splash} />
       <Redirect to="/" />
     </Switch>
   </div>

@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
         </div>
       );
     }
-    return null
+    return null;
   }
 
   update(field) {
@@ -58,96 +58,111 @@ class SessionForm extends React.Component {
   render() {
     if (this.props.formType === "login") {
       return (
-        <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
-            Welcome to TableToppers!
-            <br />
-            New to TableToppers? {this.props.navLink}
-            {this.renderErrors()}
-            <div className="login-form">
+        <>
+          <header className="session-header">
+            <h1 className="logo-header">
+              <a href="/"> TableToppers </a>
+            </h1>
+          </header>
+
+          <div className="login-form-container">
+            <form onSubmit={this.handleSubmit} className="login-form-box">
+              Welcome to TableToppers!
               <br />
-              <label>
+              New to TableToppers? {this.props.navLink}
+              {this.renderErrors()}
+              <div className="login-form">
+                <br />
+                <label>
+                  <input
+                    type="text"
+                    value={this.state.email}
+                    placeholder="Email"
+                    onChange={this.update("email")}
+                    className="login-input"
+                  />
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.update("password")}
+                    className="login-input"
+                  />
+                </label>
+                <br />
                 <input
-                  type="text"
-                  value={this.state.email}
-                  placeholder="Email"
-                  onChange={this.update("email")}
-                  className="login-input"
+                  className="session-submit"
+                  type="submit"
+                  value={this.props.formType}
                 />
-              </label>
-              <br />
-              <label>
-                <input
-                  type="password"
-                  value={this.state.password}
-                  placeholder="Password"
-                  onChange={this.update("password")}
-                  className="login-input"
-                />
-              </label>
-              <br />
-              <input
-                className="session-submit"
-                type="submit"
-                value={this.props.formType}
-              />
-            </div>
-            {this.insertDemoUser()}
-          </form>
-          <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
-        </div>
+              </div>
+              {this.insertDemoUser()}
+            </form>
+            <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
+          </div>
+        </>
       );
     } else {
       return (
-        <div className="signup-form-container">
-          <form onSubmit={this.handleSubmit} className="signup-form-box">
-            Welcome to TableToppers!
-            <br />
-            {this.renderErrors()}
-            <div className="signup-form">
+        <>
+          <header>
+            <h1 className="logo-header">
+              <a href="/"> TableToppers </a>
+            </h1>
+          </header>
+          <div className="signup-form-container">
+            <form onSubmit={this.handleSubmit} className="signup-form-box">
+              Welcome to TableToppers!
               <br />
-              <label>
+              {this.renderErrors()}
+              <div className="signup-form">
+                <br />
+                <label>
+                  <input
+                    type="text"
+                    value={this.state.username}
+                    placeholder="Username"
+                    onChange={this.update("username")}
+                    className="signup-input"
+                  />
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="text"
+                    value={this.state.email}
+                    placeholder="Email"
+                    onChange={this.update("email")}
+                    className="login-input"
+                  />
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.update("password")}
+                    className="login-input"
+                  />
+                </label>
+                <br />
                 <input
-                  type="text"
-                  value={this.state.username}
-                  placeholder="Username"
-                  onChange={this.update("username")}
-                  className="signup-input"
+                  className="session-submit"
+                  type="submit"
+                  value={this.props.formType}
                 />
-              </label>
-              <br />
-              <label>
-                <input
-                  type="text"
-                  value={this.state.email}
-                  placeholder="Email"
-                  onChange={this.update("email")}
-                  className="login-input"
-                />
-              </label>
-              <br />
-              <label>
-                <input
-                  type="password"
-                  value={this.state.password}
-                  placeholder="Password"
-                  onChange={this.update("password")}
-                  className="login-input"
-                />
-              </label>
-              <br />
-              <input
-                className="session-submit"
-                type="submit"
-                value={this.props.formType}
-              />
-            </div>
-            <div className="bottom-signup">
-              Already on TableToppers? {this.props.navLink}
-            </div>
-          </form>
-          <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
-        </div>
+              </div>
+              <div className="bottom-signup">
+                Already on TableToppers? {this.props.navLink}
+              </div>
+            </form>
+            <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
+          </div>
+        </>
       );
     }
   }
