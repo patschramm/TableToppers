@@ -4,10 +4,32 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      email: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
+  }
+
+  demoUser(e) {
+    e.preventDefault();
+    const demoUser = {
+      email: "test@example.com",
+      password: "password",
+    };
+    this.props.processForm(demoUser).then(() => this.props.history.push("/"));
+  }
+
+  insertDemoUser() {
+    if (this.props.formType === "login") {
+      return (
+        <div className="demo-login">
+          <h2>No Account? Try a demo!</h2>
+          <button onClick={this.demoUser}>demo</button>
+        </div>
+      );
+    }
+    return null
   }
 
   update(field) {
@@ -40,25 +62,25 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-form-box">
             Welcome to TableToppers!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
+            New to TableToppers? {this.props.navLink}
             {this.renderErrors()}
             <div className="login-form">
               <br />
               <label>
-                E-mail:
                 <input
                   type="text"
                   value={this.state.email}
+                  placeholder="Email"
                   onChange={this.update("email")}
                   className="login-input"
                 />
               </label>
               <br />
               <label>
-                Password:
                 <input
                   type="password"
                   value={this.state.password}
+                  placeholder="Password"
                   onChange={this.update("password")}
                   className="login-input"
                 />
@@ -70,44 +92,45 @@ class SessionForm extends React.Component {
                 value={this.props.formType}
               />
             </div>
+            {this.insertDemoUser()}
           </form>
+          <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
         </div>
       );
     } else {
       return (
-        <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+        <div className="signup-form-container">
+          <form onSubmit={this.handleSubmit} className="signup-form-box">
             Welcome to TableToppers!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()}
-            <div className="login-form">
+            <div className="signup-form">
               <br />
               <label>
-                Username:
                 <input
                   type="text"
                   value={this.state.username}
+                  placeholder="Username"
                   onChange={this.update("username")}
-                  className="login-input"
+                  className="signup-input"
                 />
               </label>
               <br />
               <label>
-                E-mail:
                 <input
                   type="text"
                   value={this.state.email}
+                  placeholder="Email"
                   onChange={this.update("email")}
                   className="login-input"
                 />
               </label>
               <br />
               <label>
-                Password:
                 <input
                   type="password"
                   value={this.state.password}
+                  placeholder="Password"
                   onChange={this.update("password")}
                   className="login-input"
                 />
@@ -119,7 +142,11 @@ class SessionForm extends React.Component {
                 value={this.props.formType}
               />
             </div>
+            <div className="bottom-signup">
+              Already on TableToppers? {this.props.navLink}
+            </div>
           </form>
+          <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
         </div>
       );
     }

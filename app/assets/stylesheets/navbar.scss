@@ -1,0 +1,76 @@
+.navbar-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+
+header {
+    background: #c41200;
+    height: 60px;
+}
+
+.navbar-wrapper a {
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background: transparent;
+
+}
+
+.signup-bttn:hover {
+    background-color: white;
+}
+
+
+.signup-bttn {
+    border: solid black 2px;
+    color: #666;
+}
+
+.login-bttn {
+    color: #666;
+}
+
+.login-bttn:hover {
+    border-bottom: solid black 2px;
+    border-radius: 0px;
+}
+// login and signup form containers MOVE LATER
+.login-form-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.signup-form-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signup-form-container {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.login-form-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+// THIS IS FOR THE LOGO HEADER
+
+.logo-header a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    margin-left: 81px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
