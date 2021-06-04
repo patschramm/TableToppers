@@ -9,7 +9,8 @@ import NavbarContainer from "./navbar/navbar_container"
 const App = () => (
   <div>
     <header>
-      <h1>TableToppers</h1>
+      <h1 className="logo-header">TableToppers</h1>
+      
       <NavbarContainer />
       {/* <WelcomeContainer /> */}
     </header>

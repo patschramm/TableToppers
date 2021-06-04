@@ -45,20 +45,20 @@ class SessionForm extends React.Component {
             <div className="login-form">
               <br />
               <label>
-                E-mail:
                 <input
                   type="text"
                   value={this.state.email}
+                  placeholder="Email"
                   onChange={this.update("email")}
                   className="login-input"
                 />
               </label>
               <br />
               <label>
-                Password:
                 <input
                   type="password"
                   value={this.state.password}
+                  placeholder="Password"
                   onChange={this.update("password")}
                   className="login-input"
                 />
@@ -71,6 +71,7 @@ class SessionForm extends React.Component {
               />
             </div>
           </form>
+          <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
         </div>
       );
     } else {
@@ -83,30 +84,30 @@ class SessionForm extends React.Component {
             <div className="signup-form">
               <br />
               <label>
-                Username:
                 <input
                   type="text"
                   value={this.state.username}
+                  placeholder="Username"
                   onChange={this.update("username")}
                   className="signup-input"
                 />
               </label>
               <br />
               <label>
-                E-mail:
                 <input
                   type="text"
                   value={this.state.email}
+                  placeholder="Email"
                   onChange={this.update("email")}
                   className="login-input"
                 />
               </label>
               <br />
               <label>
-                Password:
                 <input
                   type="password"
                   value={this.state.password}
+                  placeholder="Password"
                   onChange={this.update("password")}
                   className="login-input"
                 />
@@ -118,10 +119,11 @@ class SessionForm extends React.Component {
                 value={this.props.formType}
               />
             </div>
-          </form>
           <div className="bottom-signup">
             Already on TableToppers? {this.props.navLink}
           </div>
+          </form>
+          <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
         </div>
       );
     }
