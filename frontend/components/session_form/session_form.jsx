@@ -69,7 +69,7 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit} className="login-form-box">
               Welcome to TableToppers!
               <br />
-              New to TableToppers? {this.props.navLink}
+              New here? {this.props.navLink}
               {this.renderErrors()}
               <div className="login-form">
                 <br />
@@ -108,7 +108,7 @@ class SessionForm extends React.Component {
     } else {
       return (
         <>
-          <header>
+          <header className="session-header">
             <h1 className="logo-header">
               <a href="/"> TableToppers </a>
             </h1>

@@ -12,9 +12,10 @@ const Navbar = ({ currentUser, logout }) => {
     );
 
     const logout_bttn = () => (
-        <nav className="logout-bttn">
-            <button onClick={logout}>Logout</button>
-        </nav>
+      <nav className="logout-bttn">
+        <div>Hi, {currentUser.username}!</div>
+        <button onClick={logout}>Logout</button>
+      </nav>
     );
 
     return (
