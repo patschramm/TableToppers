@@ -14,7 +14,7 @@
 #  index_business_categories_on_category_id  (category_id)
 #
 class BusinessCategory < ApplicationRecord
-    validates :business_id, :category_id, presense: true
+    validates :business_id, :category_id, presence: true
 
     belongs_to :business,
         foreign_key: :business_id,

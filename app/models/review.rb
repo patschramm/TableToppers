@@ -16,7 +16,7 @@
 #  index_reviews_on_user_id      (user_id)
 #
 class Review < ApplicationRecord
-    validates message:, rating:, business_id:, user_id:, presense: true
+    validates :message, :rating, :business_id, :user_id, presence: true
 
     belongs_to :user,
         foreign_key: :user_id,
