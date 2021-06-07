@@ -12,7 +12,7 @@ class Category < ApplicationRecord
 
     has_many :business_categories,
         foreign_key: :catergory_id,
-        class: :BusinessCategory
+        class_name: :BusinessCategory
 
     has_many :businesses,
         through: :business_categories,

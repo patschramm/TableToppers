@@ -20,12 +20,10 @@ class Review < ApplicationRecord
 
     belongs_to :user,
         foreign_key: :user_id,
-        class: :User
+        class_name: :User
 
     belongs_to :business,
         foreign_key: :business_id,
-        class: :Business
-
-    
+        class_name: :Business
 
 end

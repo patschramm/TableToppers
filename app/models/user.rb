@@ -24,7 +24,7 @@ class User < ApplicationRecord
     
     has_many :reviews,
         foreign_key: :user_id,
-        class: :Review
+        class_name: :Review
 
     attr_reader :password
 

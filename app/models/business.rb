@@ -26,11 +26,11 @@ class Business < ApplicationRecord
 
     has_many :reviews,
         foreign_key: :business_id,
-        class: :Review
+        class_name: :Review
     
     has_many :business_categories,
         foreign_key: :business_id,
-        class: :BusinessCategory
+        class_name: :BusinessCategory
 
     has_many :categories,
         through: :business_categories,
