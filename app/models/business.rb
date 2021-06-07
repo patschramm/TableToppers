@@ -21,8 +21,8 @@
 #  index_businesses_on_name  (name) UNIQUE
 #
 class Business < ApplicationRecord
-    validates: :address, :city, :closing, :opening, :phone, :price_range, :state, :zip_code, presence: true
-    validates: :name, presence: true, uniqueness: true
+    validates :address, :city, :closing, :opening, :phone, :price_range, :state, :zip_code, presence: true
+    validates :name, presence: true, uniqueness: true
 
     has_many :reviews,
         foreign_key: :business_id,

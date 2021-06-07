@@ -40,7 +40,7 @@
 // login and signup form containers MOVE LATER
 .login-form-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .signup-form-box {
@@ -51,8 +51,12 @@
 
 .signup-form-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
 
+.log-sign-pic {
+    margin-top: 140px;
+    margin-left: 150px;
 }
 
 .login-form-box {

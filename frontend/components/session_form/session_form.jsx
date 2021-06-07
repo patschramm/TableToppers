@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
               </div>
               {this.insertDemoUser()}
             </form>
-            <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
+            <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png" className="log-sign-pic"></img>
           </div>
         </>
       );
@@ -160,7 +160,9 @@ class SessionForm extends React.Component {
                 Already on TableToppers? {this.props.navLink}
               </div>
             </form>
-            <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"></img>
+            <img
+              src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"
+              className="log-sign-pic"></img>
           </div>
         </>
       );
