@@ -14,4 +14,11 @@
 #  index_business_categories_on_category_id  (category_id)
 #
 class BusinessCategory < ApplicationRecord
+    belongs_to :business,
+        foreign_key: :business_id,
+        class_name: :Business 
+
+    belongs_to :category,
+        foreign_key: :category_id,
+        class_name: :Category
 end

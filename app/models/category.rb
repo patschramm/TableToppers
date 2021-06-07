@@ -8,4 +8,14 @@
 #  updated_at :datetime         not null
 #
 class Category < ApplicationRecord
+    validates: :name, presense: true
+
+    has_many :business_categories,
+        foreign_key: :catergory_id,
+        class: :BusinessCategory
+
+    has_many :businesses,
+        through: :business_categories,
+        source: :business
+
 end
