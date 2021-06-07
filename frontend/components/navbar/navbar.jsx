@@ -13,7 +13,7 @@ const Navbar = ({ currentUser, logout }) => {
 
     const logout_bttn = () => (
       <nav className="logout-bttn">
-        <div>Hi, {currentUser.username}!</div>
+        <div className="personal-welcome">Hi, {currentUser.username}!</div>
         <button onClick={logout}>Logout</button>
       </nav>
     );
