@@ -67,7 +67,9 @@ class SessionForm extends React.Component {
 
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              Welcome to TableToppers!
+              <div className="sign-log-tabletoppers">
+                Log in to TableToppers
+              </div> 
               <br />
               New here? {this.props.navLink}
               {this.renderErrors()}
@@ -96,12 +98,15 @@ class SessionForm extends React.Component {
                 <input
                   className="session-submit"
                   type="submit"
-                  value={this.props.formType}
+                  value="Log In"
                 />
               </div>
               {this.insertDemoUser()}
             </form>
-            <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png" className="log-sign-pic"></img>
+            <img
+              src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"
+              className="log-sign-pic"
+            ></img>
           </div>
         </>
       );
@@ -115,7 +120,9 @@ class SessionForm extends React.Component {
           </header>
           <div className="signup-form-container">
             <form onSubmit={this.handleSubmit} className="signup-form-box">
-              Welcome to TableToppers!
+              <div className="sign-log-tabletoppers">
+                Sign Up for TableToppers
+              </div> 
               <br />
               {this.renderErrors()}
               <div className="signup-form">
@@ -126,7 +133,7 @@ class SessionForm extends React.Component {
                     value={this.state.username}
                     placeholder="Username"
                     onChange={this.update("username")}
-                    className="signup-input"
+                    className="login-input"
                   />
                 </label>
                 <br />
@@ -153,7 +160,7 @@ class SessionForm extends React.Component {
                 <input
                   className="session-submit"
                   type="submit"
-                  value={this.props.formType}
+                  value="Sign Up"
                 />
               </div>
               <div className="bottom-signup">

@@ -56,13 +56,34 @@
 
 .log-sign-pic {
     margin-top: 140px;
-    margin-left: 150px;
+    margin-left: 140px;
 }
 
 .login-form-box {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.login-input {
+    width: 292px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.session-submit {
+    height: 43px;
+    width: 300px;
+    background: #23d323;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid;
+}
+
+.sign-log-tabletoppers {
+    color: #23d323;
+    font-size: 22px;
 }
 
 // THIS IS FOR THE LOGO HEADER
