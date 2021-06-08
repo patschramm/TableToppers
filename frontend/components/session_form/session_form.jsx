@@ -69,10 +69,10 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <div className="sign-log-tabletoppers">
                 Log in to TableToppers
-              </div> 
+              </div>
               <br />
               New here? {this.props.navLink}
-              {this.renderErrors()}
+              <div className="sign-log-errors">{this.renderErrors()}</div>
               <div className="login-form">
                 <br />
                 <label>
@@ -122,9 +122,9 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit} className="signup-form-box">
               <div className="sign-log-tabletoppers">
                 Sign Up for TableToppers
-              </div> 
+              </div>
               <br />
-              {this.renderErrors()}
+              <div className="sign-log-errors">{this.renderErrors()}</div>
               <div className="signup-form">
                 <br />
                 <label>
@@ -169,7 +169,8 @@ class SessionForm extends React.Component {
             </form>
             <img
               src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png"
-              className="log-sign-pic"></img>
+              className="log-sign-pic"
+            ></img>
           </div>
         </>
       );
