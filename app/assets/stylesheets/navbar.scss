@@ -37,6 +37,7 @@
     color: white;
 }
 // login and signup form containers MOVE LATER
+
 .login-form-container {
     display: flex;
     justify-content: center;
@@ -75,19 +76,19 @@
 .session-submit {
     height: 43px;
     width: 300px;
-    background: #23d323;
+    background: #23d3d3;
     vertical-align: middle;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
     color: white;
-    border: 1px solid #23d323;
+    border: 1px solid #23d3d3;
     cursor: pointer;
     border-radius: 3px;
 }
 
 .sign-log-tabletoppers {
-    color: #23d323;
+    color: #23d3d3;
     font-size: 22px;
 }
 
@@ -108,7 +109,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #00c448;
+    background: #23d3d3;
     height: 60px;
 }
 
@@ -122,11 +123,11 @@
 
 .splash-title {
     text-decoration: none;
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     font-size: 30px;
     color: white;
+    margin-top: 100px;
 }
 
 .splash-header {
