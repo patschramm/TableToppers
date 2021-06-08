@@ -21,7 +21,7 @@ export const receiveErrors = (errors) => ({
 
 export const resetSessionErrors = () => ({
   type: RESET_SESSION_ERRORS,
-})
+});
 
 export const signup = (user) => (dispatch) =>
   APIUtil.signup(user).then(
