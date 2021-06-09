@@ -4,7 +4,7 @@ import React from 'react';
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        
     }
 
     componentDidMount() {
@@ -14,7 +14,7 @@ class BusinessShow extends React.Component {
     render() { 
         return ( 
             <div className="business-wrapper">
-                
+
             </div>
         );
     }
