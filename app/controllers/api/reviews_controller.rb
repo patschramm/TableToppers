@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-    before_action :require_logged_in, except: [:index]
+    # before_action :require_login, except: [:index]
 
     def index
         @reviews = Review.all.where(business_id: params[:business_id])
@@ -12,24 +12,21 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.create(review_params)
+        @review = Review.new(review_params)
         if @review.save
             render :show
         else
             render json: @review.errors.full_messages, status: 422
         end
     end
-
-    def edit
-        @review = Review.find(params[:id])
-    end
-
+    
     def update
         @review = Review.find(params[:id])
-        if @review.user_id == current_user.id && @review.update(review_params)
+        user = current_user
+        if @review.user_id == user.id && @review.update(review_params)
             render :show
         else
-            render json: ["Review could not be updated"], stauts: 422
+            render json: ["Review could not be updated"], status: 422
         end
     end
 

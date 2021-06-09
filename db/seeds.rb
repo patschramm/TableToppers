@@ -8,7 +8,8 @@
 
 require 'open-uri'
 
-User.destroy_all
+User.delete_all
+Business.delete_all
 
 demoUser = User.create!(
     username: 'demoUser',
@@ -72,12 +73,12 @@ business1 = Business.create!(
     address: "16771 SW 12th St d",
     state: "OR",
     city: "Sherwood",
-    zipCode: 97140,
+    zip_code: 97140,
     opening: 12,
     closing: 19,
-    phoneNum: 5036101208,
+    phone: 5036101208,
     website: "www.glimpsesofwonder.com",
-    priceRange: "$$"
+    price_range: "$$"
 )
 
 business2 = Business.create!(
@@ -85,12 +86,12 @@ business2 = Business.create!(
     address: "12551 SW Main St",
     state: "OR",
     city: "Tigard",
-    zipCode: 97223,
+    zip_code: 97223,
     opening: 12,
     closing: 18,
-    phoneNum: 9713129566,
+    phone: 9713129566,
     website: "www.versusboardgames.com",
-    priceRange: "$$"
+    price_range: "$$"
 )
 
 business3 = Business.create!(
@@ -98,12 +99,12 @@ business3 = Business.create!(
     address: "238 SE Washington St",
     state: "OR",
     city: "Hillsboro",
-    zipCode: 97123,
+    zip_code: 97123,
     opening: 12,
     closing: 20,
-    phoneNum: 5035217610,
+    phone: 5035217610,
     website: "www.runeandboard.com",
-    priceRange: "$" 
+    price_range: "$" 
 )
 
 business4 = Business.create!(
@@ -111,12 +112,12 @@ business4 = Business.create!(
     address: "922 N Killingsworth St",
     state: "OR",
     city: "Portland",
-    zipCode: 97217,
+    zip_code: 97217,
     opening: 11,
     closing: 19,
-    phoneNum: 5032896373,
+    phone: 5032896373,
     website: "www.theportlandgamestore.com",
-    priceRange: "$" 
+    price_range: "$" 
 )
 
 business5 = Business.create!(
@@ -124,12 +125,12 @@ business5 = Business.create!(
     address: "1656 C Beavercreek Rd",
     state: "OR",
     city: "Oregon City",
-    zipCode: 97045,
+    zip_code: 97045,
     opening: 10,
     closing: 21.5,
-    phoneNum: 5036505008,
+    phone: 5036505008,
     website: "www.ocgeeksandgames.com/",
-    priceRange: "$$$"
+    price_range: "$$$"
 )
 
 business6 = Business.create!(
@@ -137,12 +138,12 @@ business6 = Business.create!(
     address: "6350 SW Capitol Hwy",
     state: "OR",
     city: "Portland",
-    zipCode: 97239,
+    zip_code: 97239,
     opening: 11,
     closing: 18,
-    phoneNum: 5032440290,
+    phone: 5032440290,
     website: "www.otherworldsgames.com",
-    priceRange: "$"
+    price_range: "$"
 )
 
 business7 = Business.create!(
@@ -150,12 +151,12 @@ business7 = Business.create!(
     address: "1226 SE Lexington St",
     state: "OR",
     city: "Portland",
-    zipCode: 97202,
+    zip_code: 97202,
     opening: 11,
     closing: 19,
-    phoneNum: 5035059344,
+    phone: 5035059344,
     website: "www.cloudcapgames.com",
-    priceRange: "$$"
+    price_range: "$$"
 )
 
 business8 = Business.create!(
@@ -163,12 +164,12 @@ business8 = Business.create!(
     address: "17185 SE McLoughlin Blvd suite e",
     state: "OR",
     city: "Milwaukie",
-    zipCode: 97267,
+    zip_code: 97267,
     opening: 12,
     closing: 20,
-    phoneNum: 5038504756,
+    phone: 5038504756,
     website: "www.epicgamingpdx.com/",
-    priceRange: "$"
+    price_range: "$"
 )
 
 business9 = Business.create!(
@@ -176,12 +177,12 @@ business9 = Business.create!(
     address: "7160 SE Foster Rd",
     state: "OR",
     city: "Portland",
-    zipCode: 97206,
+    zip_code: 97206,
     opening: 11,
     closing: 19,
-    phoneNum: 5034775727,
+    phone: 5034775727,
     website: "www.redcastlegames.com",
-    priceRange: "$$$"
+    price_range: "$$$"
 )
 
 business10 = Business.create!(
@@ -189,10 +190,10 @@ business10 = Business.create!(
     address: "345 SE Taylor St",
     state: "OR",
     city: "Portland",
-    zipCode: 97214,
+    zip_code: 97214,
     opening: 10,
     closing: 21,
-    phoneNum: 5032384000,
+    phone: 5032384000,
     website: "www.ggportland.com",
-    priceRange: "$$"
+    price_range: "$$"
 )
