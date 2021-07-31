@@ -116,12 +116,12 @@ class BusinessShow extends React.Component {
   }
 
   render() {
-    if (!this.props.business) {
+    if (!this.props.business || this.props.business === undefined || this.props.business === null) {
       return null;
     }
 
     let rating = 0;
-    if (!this.props.business.reviews.length) {
+    if (!this.props.business.reviews) {
       rating = (5.0).toFixed(2);
     } else {
       let sum = 0;
