@@ -3,9 +3,9 @@ import React from 'react'
 const Footer = () => {
 	return (
 		<div className="footer-wrapper">
-			<div>
+			<ul>
 
-			</div>
+			</ul>
 		</div>
 	)
 }

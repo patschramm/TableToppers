@@ -27,15 +27,17 @@ const Splash = ({ businesses, fetchBusinesses }) => {
   }, businessList);
 
   const randomBusinesses = () => {
-    let randomBusinesses = [];
+    let random = [];
 
-    while (randomBusinesses.length !== 3) {
+    while (random.length < 3) { //
       let i = Math.floor(Math.random() * businessList.length);
-      let currItem = businessList[i];
-      randomBusinesses.push(currItem);
+      const currItem = businessList[i];
+      if (!random.includes(currItem)) {
+        random.push(currItem);
+      }
     }
-    console.log(randomBusinesses);
-    return randomBusinesses;
+
+    return random;
   };
 
   if (businessList.length < 1) {
@@ -66,8 +68,8 @@ const Splash = ({ businesses, fetchBusinesses }) => {
 
           <h1>Hot & New Businesses</h1>
           <div className="hot-splash-wrapper">
-            {randBus.map((business) => {
-              return <BusinessSplash business={business} />;
+            {randBus.map((business, i) => {
+              return <BusinessSplash key={`business-${i}`} business={business} />;
             })}
           </div>
         </div>
