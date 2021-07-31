@@ -1,14 +1,33 @@
 // THIS IS FOR THE SPLASH PAGE
-
+.splash-header {
+    height: 600px;
+}
 .splash-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   max-width: 960px;
   margin: 0 auto;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
+.search-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(119, 119, 119);
+}
+
+.search-input-wrapper > p {
+    padding-left: 12px;
+    color: rgb(119, 119, 119);
+}
+
+.search-input-wrapper > p:hover {
+    padding-left: 12px;
+    color: rgb(119, 119, 119);
+    cursor: default;
+}
 .splash-title {
   text-decoration: none;
   display: flex;
@@ -45,4 +64,49 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.459);
   z-index: -10;
+}
+
+.splash-main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.splash-main > h1 {
+  padding-top: 36px;
+  text-align: center;
+  font-weight: 600;
+  color: #23d3d3;
+}
+
+.splash-main-links > a {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+    height: 36px;
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+}
+
+.splash-main-links > a:hover {
+    text-decoration: none;
+    height: 33px;
+    border-bottom: 3px solid #23d3d3;
+}
+
+
+.splash-main-links {
+    border-bottom: 1px solid #666666;
+}
+
+.hot-splash-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bus-splash-wrapper {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SearchLinks = () => {
+const SearchLinks = ({className}) => {
   return (
-    <div className="search-link-wrapper">
-      <Link>Fantasy</Link>
-			<Link>Live Games</Link>
-			<Link>Hobby Shops</Link>
+    <div className={`search-link-wrapper ${className}`}>
+      <Link to="#">Fantasy</Link>
+			<Link to="#">Live Games</Link>
+			<Link to="#">Hobby Shops</Link>
     </div>
   );
 };

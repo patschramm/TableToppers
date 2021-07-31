@@ -10,12 +10,14 @@ class Search extends Component {
       <>
         <form className="splash-search-wrapper" action="">
           <div className="search-input-wrapper">
+						<p>Find</p>
             <input
               className="splash-search search-bar"
-              placeholder="Find local game stores, game cafes..."
+              placeholder="local game stores, game cafes..."
               type="text"
             />
             <span>|</span>
+						<p>Near</p>
             <input
               className="splash-search search-bar"
               placeholder="Portland area for now"
