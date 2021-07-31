@@ -2,6 +2,7 @@
    display: flex;
    flex-direction: row;
    justify-content: flex-end;
+   max-width: 960px;
 }
 
 .navbar-wrapper a {
@@ -112,31 +113,3 @@
     background: #23d3d3;
     height: 60px;
 }
-
-// THIS IS FOR THE SPLASH PAGE
-
-.splash-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.splash-title {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: white;
-    margin-top: 100px;
-}
-
-.splash-header {
-    padding-top: 30px;
-    height: 570px;
-    background-color: #333;
-    background-size: cover;
-    background-position: 50%;
-    background-image: url("https://images.unsplash.com/photo-1529981188441-8a2e6fe30103?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80");
-}
-
-

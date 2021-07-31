@@ -1,0 +1,20 @@
+.search-link-wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.search-link-wrapper > a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-weight: 600;
+	margin: 0 12px;
+	margin-top: 10px;
+}
+
+.search-link-wrapper > a:hover {
+	text-decoration: underline;
+
+}
+

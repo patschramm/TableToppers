@@ -1,0 +1,48 @@
+// THIS IS FOR THE SPLASH PAGE
+
+.splash-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.splash-title {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+
+.splash-header-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #333;
+  background-size: cover;
+  background-position: 50%;
+  background-image: url("https://images.unsplash.com/photo-1529981188441-8a2e6fe30103?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80");
+  z-index: -55;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 600px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.459);
+  z-index: -10;
+}

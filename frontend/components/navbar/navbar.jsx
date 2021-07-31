@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ currentUser, logout }) => {
+const Navbar = ({ currentUser, logout, location }) => {
   const login_links = () => (
     <nav className="login-signup">
       <Link to="/login" className="login-bttn">
@@ -21,9 +21,20 @@ const Navbar = ({ currentUser, logout }) => {
     </nav>
   );
 
+  const splashNavBar = () => (
+    <nav className="splash-nav nav-bar">
+      {currentUser ? logout_bttn(): login_links()}
+    </nav>
+  )
+
+  let currNavBar = null;
+  if (location.pathname === "/") {
+    currNavBar = splashNavBar();
+  }
+
   return (
     <nav className="navbar-wrapper">
-      {currentUser ? logout_bttn() : login_links()}
+      {currNavBar}
     </nav>
   );
 };
