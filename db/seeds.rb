@@ -81,6 +81,11 @@ business1 = Business.create!(
     price_range: "$$"
 )
 
+business1.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gww1.png'),
+  filename: 'gww1.png'
+)
+
 business2 = Business.create!(
     name: "Versus Board Games",
     address: "12551 SW Main St",

@@ -35,5 +35,7 @@ class Business < ApplicationRecord
     has_many :categories,
         through: :business_categories,
         source: :category
+
+    has_many_attached :photos
             
 end
