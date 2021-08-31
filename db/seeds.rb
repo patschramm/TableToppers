@@ -85,6 +85,14 @@ business1.photos.attach(
   io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gww1.png'),
   filename: 'gww1.png'
 )
+business1.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gww2.png'),
+  filename: 'gww2.png'
+)
+business1.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gww3.png'),
+  filename: 'gww3.png'
+)
 
 business2 = Business.create!(
     name: "Versus Board Games",
@@ -97,6 +105,19 @@ business2 = Business.create!(
     phone: 9713129566,
     website: "www.versusboardgames.com",
     price_range: "$$"
+)
+
+business2.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/vbg1.png'),
+  filename: 'vbg1.png'
+)
+business2.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/vbg2.png'),
+  filename: 'vbg2.png'
+)
+business2.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/vbg3.png'),
+  filename: 'vbg3.png'
 )
 
 business3 = Business.create!(
@@ -112,6 +133,19 @@ business3 = Business.create!(
     price_range: "$" 
 )
 
+business3.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/rab1.png'),
+  filename: 'rab1.png'
+)
+business3.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/rab2.png'),
+  filename: 'rab2.png'
+)
+business3.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/rab3.png'),
+  filename: 'rab3.png'
+)
+
 business4 = Business.create!(
     name: "The Portland Game Store",
     address: "922 N Killingsworth St",
@@ -123,6 +157,19 @@ business4 = Business.create!(
     phone: 5032896373,
     website: "www.theportlandgamestore.com",
     price_range: "$" 
+)
+
+business4.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/pgs1.png'),
+  filename: 'pgs1.png'
+)
+business4.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/pgs2.png'),
+  filename: 'pgs2.png'
+)
+business4.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/pgs3.png'),
+  filename: 'pgs3.png'
 )
 
 business5 = Business.create!(
@@ -138,6 +185,19 @@ business5 = Business.create!(
     price_range: "$$$"
 )
 
+business5.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gag1.png'),
+  filename: 'gag1.png'
+)
+business5.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gag2.png'),
+  filename: 'gag2.png'
+)
+business5.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gag3.png'),
+  filename: 'gag3.png'
+)
+
 business6 = Business.create!(
     name: "Other Worlds Games & Comics",
     address: "6350 SW Capitol Hwy",
@@ -149,6 +209,19 @@ business6 = Business.create!(
     phone: 5032440290,
     website: "www.otherworldsgames.com",
     price_range: "$"
+)
+
+business6.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/owg1.png'),
+  filename: 'owg1.png'
+)
+business6.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/owg2.png'),
+  filename: 'owg2.png'
+)
+business6.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/owg3.png'),
+  filename: 'owg3.png'
 )
 
 business7 = Business.create!(
@@ -164,6 +237,19 @@ business7 = Business.create!(
     price_range: "$$"
 )
 
+business7.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/ccg1.png'),
+  filename: 'ccg1.png'
+)
+business7.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/ccg2.png'),
+  filename: 'ccg2.png'
+)
+business7.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/ccg3.png'),
+  filename: 'ccg3.png'
+)
+
 business8 = Business.create!(
     name: "Epic Gaming",
     address: "17185 SE McLoughlin Blvd suite e",
@@ -175,6 +261,19 @@ business8 = Business.create!(
     phone: 5038504756,
     website: "www.epicgamingpdx.com/",
     price_range: "$"
+)
+
+business8.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/eg1.png'),
+  filename: 'eg1.png'
+)
+business8.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/eg2.png'),
+  filename: 'eg2.png'
+)
+business8.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/eg3.png'),
+  filename: 'eg3.png'
 )
 
 business9 = Business.create!(
@@ -190,6 +289,19 @@ business9 = Business.create!(
     price_range: "$$$"
 )
 
+business9.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/rcg1.png'),
+  filename: 'rcg1.png'
+)
+business9.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/rcg2.png'),
+  filename: 'rcg2.png'
+)
+business9.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/rcg3.png'),
+  filename: 'rcg3.png'
+)
+
 business10 = Business.create!(
     name: "Guardian Games",
     address: "345 SE Taylor St",
@@ -201,4 +313,17 @@ business10 = Business.create!(
     phone: 5032384000,
     website: "www.ggportland.com",
     price_range: "$$"
+)
+
+business10.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gg1.png'),
+  filename: 'gg1.png'
+)
+business10.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gg2.png'),
+  filename: 'gg2.png'
+)
+business10.photos.attach(
+  io: open('https://tabletoppers-dev.s3.us-west-2.amazonaws.com/seed/gg3.png'),
+  filename: 'gg3.png'
 )
