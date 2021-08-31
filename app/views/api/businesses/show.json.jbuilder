@@ -15,3 +15,5 @@ json.partial! '/api/businesses/business', business: @business
     #   end
     # end
   end
+
+  json.photoUrls @business.photos.map { |file| url_for(file) }
