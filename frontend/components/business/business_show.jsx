@@ -1,14 +1,16 @@
 import React from "react";
 import Rating from "react-simple-star-rating";
+import NavbarContainer from "../navbar/navbar_container";
 
-
-{/* <span>{Array(Math.floor(business.rating)).fill(<MyStar></MyStar>)} </span>;
+{
+  /* <span>{Array(Math.floor(business.rating)).fill(<MyStar></MyStar>)} </span>;
 
 const MyStar = styled(StarIcon)({
   color: "#222222",
   width: "20px",
   backgroundColor: "transparent",
-}); */}
+}); */
+}
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
@@ -116,7 +118,11 @@ class BusinessShow extends React.Component {
   }
 
   render() {
-    if (!this.props.business || this.props.business === undefined || this.props.business === null) {
+    if (
+      !this.props.business ||
+      this.props.business === undefined ||
+      this.props.business === null
+    ) {
       return null;
     }
 
@@ -151,36 +157,44 @@ class BusinessShow extends React.Component {
     } else {
       this.avgStar = this.oneStar;
     }
-
-    return (
-      <div className="business-wrapper">
-        <div className="business-header">
-          <div className="business-header-bg"></div>
-          <div className="business-header-title">
-            {this.props.business.name}
-          </div>
-          <div className="business-header-rating">{this.avgStar}</div>
-          <div className="business-header-hours">{this.hours()}</div>
-          {/* <div className="business-header-photo-bttn"></div> */}
-        </div>
-        <div className="business-body">
-          <div className="business-body-cats">
-            <span className="dollar-sign">
-              {this.props.business.price_range}
-            </span>
-          </div>
-          <div className="business-body-map-hours">
-            <div className="business-body-map"></div>
-            <div className="business-body-hours">
-              Sunday: {this.hours()}, Monday: {this.hours()}, Tuesday:{" "}
-              {this.hours()}, Wednesday: {this.hours()}, Thursday:{" "}
-              {this.hours()}, Friday: {this.hours()}, Saturday: {this.hours()}
+    if (this.props.business.photoUrls == null) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div className="business-wrapper">
+          <div className="business-header">
+            <div className="business-header-photos">
+              {this.props.business.photoUrls.map((url) => {
+                return <img src={url} />;
+              })}
             </div>
+            <div className="business-header-bg"></div>
+            <div className="business-header-title">
+              {this.props.business.name}
+            </div>
+            <div className="business-header-rating">{this.avgStar}</div>
+            <div className="business-header-hours">{this.hours()}</div>
+            {/* <div className="business-header-photo-bttn"></div> */}
           </div>
-          <div className="business-body-reviews"></div>
+          <div className="business-body">
+            <div className="business-body-cats">
+              <span className="dollar-sign">
+                {this.props.business.price_range}
+              </span>
+            </div>
+            <div className="business-body-map-hours">
+              <div className="business-body-map"></div>
+              <div className="business-body-hours">
+                Sunday: {this.hours()}, Monday: {this.hours()}, Tuesday:{" "}
+                {this.hours()}, Wednesday: {this.hours()}, Thursday:{" "}
+                {this.hours()}, Friday: {this.hours()}, Saturday: {this.hours()}
+              </div>
+            </div>
+            <div className="business-body-reviews"></div>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 

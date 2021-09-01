@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Search from "../search/search";
 
 const Navbar = ({ currentUser, logout, location }) => {
   const login_links = () => (
@@ -27,9 +28,19 @@ const Navbar = ({ currentUser, logout, location }) => {
     </nav>
   )
 
+  const normalNavBar = () => (
+    <nav className="normal-nav nav-bar">
+      <h4>TableToppers</h4>
+      <Search />
+      {currentUser ? logout_bttn() : login_links()}
+    </nav>
+  );
+
   let currNavBar = null;
   if (location.pathname === "/") {
     currNavBar = splashNavBar();
+  } else if (location.pathname === "/signup" || location.pathname === "/login") {
+    currNavBar = null
   }
 
   return (

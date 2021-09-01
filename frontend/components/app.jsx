@@ -9,6 +9,8 @@ import Splash from "./splash/splash";
 import BusinessShowContainer from "./business/business_show_container";
 
 const App = () => (
+  <>
+  <NavbarContainer />
   <div>
     <Switch>
       <Route exact path="/businesses/:id" component={BusinessShowContainer} />
@@ -18,6 +20,7 @@ const App = () => (
       <Redirect to="/" />
     </Switch>
   </div>
+  </>
 );
 
 export default App;
