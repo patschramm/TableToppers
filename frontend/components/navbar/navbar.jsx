@@ -30,7 +30,7 @@ const Navbar = ({ currentUser, logout, location }) => {
 
   const normalNavBar = () => (
     <nav className="normal-nav nav-bar">
-      <h4>TableToppers</h4>
+      <Link to="/" className="logo">TableToppers</Link>
       <Search />
       {currentUser ? logout_bttn() : login_links()}
     </nav>
@@ -41,6 +41,8 @@ const Navbar = ({ currentUser, logout, location }) => {
     currNavBar = splashNavBar();
   } else if (location.pathname === "/signup" || location.pathname === "/login") {
     currNavBar = null
+  } else {
+    currNavBar = normalNavBar();
   }
 
   return (

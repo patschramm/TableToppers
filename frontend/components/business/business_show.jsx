@@ -162,19 +162,37 @@ class BusinessShow extends React.Component {
     } else {
       return (
         <div className="business-wrapper">
+          <nav>
+            <NavbarContainer />
+          </nav>
           <div className="business-header">
             <div className="business-header-photos">
               {this.props.business.photoUrls.map((url) => {
-                return <img src={url} />;
+                return <img src={url} className="bh-photo" />;
               })}
             </div>
-            <div className="business-header-bg"></div>
-            <div className="business-header-title">
-              {this.props.business.name}
+            <div className="bh-info-wrapper">
+              <div className="bh-info">
+                <h1 className="business-header-title">
+                  {this.props.business.name}
+                </h1>
+                <div className="business-header-rating">{this.avgStar}</div>
+                <div className="business-header-categories">
+                  {this.props.business.categories.map((category, i) => {
+                    if (i !== this.props.business.categories.length - 1) {
+                      return category + ", ";
+                    } else {
+                      return category;
+                    }
+                  })}
+                </div>
+                <div className="business-header-price">
+                  {this.props.business.price_range}
+                </div>
+                <div className="business-header-hours">{this.hours()}</div>
+              </div>
+              <div className="business-header-photos-bttn">See Photos</div>
             </div>
-            <div className="business-header-rating">{this.avgStar}</div>
-            <div className="business-header-hours">{this.hours()}</div>
-            {/* <div className="business-header-photo-bttn"></div> */}
           </div>
           <div className="business-body">
             <div className="business-body-cats">

@@ -1,3 +1,86 @@
 // Place all the styles related to the businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.business-header-photos {
+  height: 380px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.bh-photo {
+  height: 100%;
+  width: 34%;
+  object-fit: cover;
+}
+
+.business-header {
+  position: relative;
+}
+
+.bh-info {
+  width: 80%;
+}
+
+.bh-info-wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 64px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.business-header-title {
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: 900;
+  height: 67px;
+}
+
+.fa-star {
+  background-color: #23d3d3;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0px 2px;
+}
+
+.business-header-rating {
+  margin-bottom: 16px;
+}
+
+.business-header-hours {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.business-header-price {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.business-header-photos-bttn {
+  padding: 12px 32px;
+  border: 2px solid rgb(187,186,192);
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  transition: all .15s;
+}
+
+.business-header-photos-bttn:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}

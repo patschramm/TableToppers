@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class Search extends Component {
   constructor(props) {
@@ -8,18 +9,18 @@ class Search extends Component {
   render() {
     return (
       <>
-        <form className="splash-search-wrapper" action="">
+        <form className="search-wrapper" action="">
           <div className="search-input-wrapper">
-						<p>Find</p>
+            {(location.hash === "#/") ? <p>Find</p> : null}
             <input
-              className="splash-search search-bar"
+              className="search search-bar"
               placeholder="local game stores, game cafes..."
               type="text"
             />
             <span>|</span>
-						<p>Near</p>
+            {(location.hash === "#/") ? <p>Near</p> : null}
             <input
-              className="splash-search search-bar"
+              className="search search-bar"
               placeholder="Portland area for now"
               type="text"
             />
@@ -33,4 +34,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);

@@ -1,115 +1,169 @@
 .navbar-wrapper {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-   max-width: 960px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  max-width: 960px;
 }
 
 .navbar-wrapper a {
-    text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 4px;
-    background: transparent;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background: transparent;
 }
 
 .signup-bttn:hover {
-    background-color: white;
-    color: #666;
+  background-color: white;
+  color: #666;
 }
 
-
 .signup-bttn {
-    border: 2px solid #fff;
-    padding: 7px 24px 8px;
-    color: white;
-    font-size: 15px;
+  border: 2px solid #fff;
+  padding: 7px 24px 8px;
+  color: white;
+  font-size: 15px;
 }
 
 .login-bttn {
-    color: white;
+  color: white;
 }
 
 .login-bttn:hover {
-    border-bottom: solid black 2px;
-    border-radius: 0px;
+  border-bottom: solid black 2px;
+  border-radius: 0px;
 }
 
 .personal-welcome {
-    color: white;
+  color: white;
 }
 // login and signup form containers MOVE LATER
 
 .login-form-container {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .signup-form-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .signup-form-container {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .log-sign-pic {
-    margin-top: 140px;
-    margin-left: 140px;
+  margin-top: 140px;
+  margin-left: 140px;
 }
 
 .login-form-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .login-input {
-    width: 292px;
-    height: 25px;
-    margin-bottom: 10px;
+  width: 292px;
+  height: 25px;
+  margin-bottom: 10px;
 }
 
 .session-submit {
-    height: 43px;
-    width: 300px;
-    background: #23d3d3;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border: 1px solid #23d3d3;
-    cursor: pointer;
-    border-radius: 3px;
+  height: 43px;
+  width: 300px;
+  background: #23d3d3;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: 1px solid #23d3d3;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .sign-log-tabletoppers {
-    color: #23d3d3;
-    font-size: 22px;
+  color: #23d3d3;
+  font-size: 22px;
 }
 
 .sign-log-errors {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 // THIS IS FOR THE LOGO HEADER
 
 .logo-header a {
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    margin: auto;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  margin: auto;
 }
 
 .session-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #23d3d3;
-    height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #23d3d3;
+  height: 60px;
+}
+
+.normal-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.normal-nav .login-bttn {
+  color: black;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 1px solid rgba(187, 186, 192, 1);
+  transition: all 0.8s;
+}
+
+.normal-nav .login-bttn:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.normal-nav .signup-bttn {
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 1px solid rgba(187, 186, 192, 1);
+  background-color: #23d3d3;
+}
+
+.business-wrapper .navbar-wrapper {
+  margin: 0 auto;
+}
+
+.normal-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.normal-nav .search-wrapper {
+  border: none;
+  background: transparent;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.15);
+
+}
+
+.normal-nav button {
+    border-left: none;
+    color: white;
+}
+
+.normal-nav .logo {
+    font-size: 18px;
 }
