@@ -102,6 +102,10 @@ class BusinessShow extends React.Component {
     this.props.fetchBusiness(this.props.match.params.id);
   }
 
+  phone() {
+    let phone = this.props.business.phone.slice
+  }
+
   hours() {
     let hours = "";
     if (this.props.business.opening === 12) {
@@ -189,7 +193,7 @@ class BusinessShow extends React.Component {
                 <div className="business-header-price">
                   {this.props.business.price_range}
                 </div>
-                <div className="business-header-hours">{this.hours()}</div>
+                <div className="business-header-hours">Today: {this.hours()}</div>
               </div>
               <div className="business-header-photos-bttn">See Photos</div>
             </div>
@@ -200,12 +204,21 @@ class BusinessShow extends React.Component {
                 {this.props.business.price_range}
               </span>
             </div>
-            <div className="business-body-map-hours">
-              <div className="business-body-map"></div>
-              <div className="business-body-hours">
-                Sunday: {this.hours()}, Monday: {this.hours()}, Tuesday:{" "}
-                {this.hours()}, Wednesday: {this.hours()}, Thursday:{" "}
-                {this.hours()}, Friday: {this.hours()}, Saturday: {this.hours()}
+            <div className="business-body-main">
+              <div className="bus-loc-hours">
+                <h4 className="loc-hours-title">Location & Hours</h4>
+                <div className="business-body-hours">
+                  <div className="hours-day"> Sun   {this.hours()}, </div>
+                  <div className="hours-day"> Mon   {this.hours()}, </div>
+                  <div className="hours-day"> Tue   {this.hours()}, </div>
+                  <div className="hours-day"> Wed   {this.hours()}, </div>
+                  <div className="hours-day"> Thu   {this.hours()}, </div>
+                  <div className="hours-day"> Fri   {this.hours()}, </div>
+                  <div className="hours-day"> Sat   {this.hours()} </div>
+                </div>
+                <div className="bus-body-links">
+                  
+                </div>
               </div>
             </div>
             <div className="business-body-reviews"></div>
