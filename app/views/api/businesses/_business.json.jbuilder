@@ -10,3 +10,5 @@ json.extract! business,
     :state,
     :website,
     :zip_code
+
+json.photoUrls business.photos.map { |file| url_for(file) }

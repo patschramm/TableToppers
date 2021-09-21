@@ -4,3 +4,4 @@
     json.reviews business.reviews
   end
 end
+
