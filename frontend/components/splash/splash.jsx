@@ -74,9 +74,9 @@ const Splash = ({ businesses, fetchBusinesses }) => {
           </div>
         </div>
 
-        <footer>
+        {/* <footer>
           <Footer />
-        </footer>
+        </footer> */}
       </>
     );
   }
