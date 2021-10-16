@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavbarContainer from "../navbar/navbar_container";
 
 {
@@ -98,6 +99,7 @@ class BusinessShow extends React.Component {
   }
 
   componentDidMount() {
+    console.log("business", this.props.business)
     this.props.fetchBusiness(this.props.match.params.id);
   }
 
@@ -127,103 +129,109 @@ class BusinessShow extends React.Component {
       this.props.business === null
     ) {
       return null;
-    }
-
-    let rating = 0;
-    if (!this.props.business.reviews) {
-      rating = (5.0).toFixed(2);
     } else {
-      let sum = 0;
-      let avg = 0;
-      for (let i = 0; i < this.props.business.reviews.length; i++) {
-        sum += this.props.business.reviews[i].rating;
+      console.log("in render", this.props.business)
+      let rating = 0;
+      if (!this.props.business.reviews) {
+        rating = (5.0).toFixed(2);
+      } else {
+        let sum = 0;
+        let avg = 0;
+        for (let i = 0; i < this.props.business.reviews.length; i++) {
+          sum += this.props.business.reviews[i].rating;
+        }
+        avg = sum / this.props.business.reviews.length;
+        rating = avg.toFixed(2);
       }
-      avg = sum / this.props.business.reviews.length;
-      rating = avg.toFixed(2);
-    }
-    if (rating > 4.9) {
-      this.avgStar = this.fiveStar;
-    } else if (rating > 4.4 && rating <= 4.9) {
-      this.avgStar = this.fourHalfStar;
-    } else if (rating >= 4.0 && rating <= 4.4) {
-      this.avgStar = this.fourStar;
-    } else if (rating > 3.5 && rating < 4) {
-      this.avgStar = this.threeHalfStar;
-    } else if (rating >= 3 && rating <= 3.5) {
-      this.avgStar = this.threeStar;
-    } else if (rating > 2.5 && rating < 3) {
-      this.avgStar = this.twoHalfStar;
-    } else if (rating >= 2 && rating <= 2.5) {
-      this.avgStar = this.twoStar;
-    } else if (rating > 1.5 && rating < 2) {
-      this.avgStar = this.oneHalfStar;
-    } else {
-      this.avgStar = this.oneStar;
-    }
-    if (this.props.business.photoUrls == null) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-        <div className="business-wrapper">
-          <nav>
-            <NavbarContainer />
-          </nav>
-          <div className="business-header">
-            <div className="business-header-photos">
-              {this.props.business.photoUrls.map((url) => {
-                return <img src={url} className="bh-photo" />;
-              })}
-            </div>
-            <div className="bh-info-wrapper">
-              <div className="bh-info">
-                <h1 className="business-header-title">
-                  {this.props.business.name}
-                </h1>
-                <div className="business-header-rating">{this.avgStar}</div>
-                <div className="business-header-categories">
-                  {this.props.business.categories.map((category, i) => {
-                    if (i !== this.props.business.categories.length - 1) {
-                      return category + ", ";
-                    } else {
-                      return category;
-                    }
-                  })}
+      if (rating > 4.9) {
+        this.avgStar = this.fiveStar;
+      } else if (rating > 4.4 && rating <= 4.9) {
+        this.avgStar = this.fourHalfStar;
+      } else if (rating >= 4.0 && rating <= 4.4) {
+        this.avgStar = this.fourStar;
+      } else if (rating > 3.5 && rating < 4) {
+        this.avgStar = this.threeHalfStar;
+      } else if (rating >= 3 && rating <= 3.5) {
+        this.avgStar = this.threeStar;
+      } else if (rating > 2.5 && rating < 3) {
+        this.avgStar = this.twoHalfStar;
+      } else if (rating >= 2 && rating <= 2.5) {
+        this.avgStar = this.twoStar;
+      } else if (rating > 1.5 && rating < 2) {
+        this.avgStar = this.oneHalfStar;
+      } else {
+        this.avgStar = this.oneStar;
+      }
+      if (this.props.business.photoUrls == null) {
+        return <div>Loading...</div>;
+      } else {
+        return (
+          <div className="business-wrapper">
+            <nav>
+              <NavbarContainer />
+            </nav>
+            <div className="business-header">
+              <div className="business-header-photos">
+                {this.props.business.photoUrls.map((url) => {
+                  return <img src={url} className="bh-photo" />;
+                })}
+              </div>
+              <div className="bh-info-wrapper">
+                <div className="bh-info">
+                  <h1 className="business-header-title">
+                    {this.props.business.name}
+                  </h1>
+                  <div className="business-header-rating">{this.avgStar}</div>
+                  <div className="business-header-categories">
+                    {/* {this.props.business.categories.map((category, i) => {
+                      if (i !== this.props.business.categories.length - 1) {
+                        return category + ", ";
+                      } else {
+                        return category;
+                      }
+                    })} */}
+                  </div>
+                  <div className="business-header-price">
+                    {this.props.business.price_range}
+                  </div>
+                  <div className="business-header-hours">
+                    Today: {this.hours()}
+                  </div>
                 </div>
-                <div className="business-header-price">
+                <div className="business-header-photos-bttn">See Photos</div>
+              </div>
+            </div>
+            <div className="business-body">
+              <div className="business-body-review-button">
+                <Link to={`/businesses/${this.props.business.id}/createreview`} className="create-review-button">
+                  Write a Review
+                </Link>
+              </div>
+              <div className="business-body-cats">
+                <span className="dollar-sign">
                   {this.props.business.price_range}
-                </div>
-                <div className="business-header-hours">Today: {this.hours()}</div>
+                </span>
               </div>
-              <div className="business-header-photos-bttn">See Photos</div>
-            </div>
-          </div>
-          <div className="business-body">
-            <div className="business-body-cats">
-              <span className="dollar-sign">
-                {this.props.business.price_range}
-              </span>
-            </div>
-            <div className="business-body-main">
-              <div className="bus-loc-hours">
-                <h4 className="loc-hours-title">Location & Hours</h4>
-                <div className="business-body-hours">
-                  <div className="hours-day"> Sun   {this.hours()}, </div>
-                  <div className="hours-day"> Mon   {this.hours()}, </div>
-                  <div className="hours-day"> Tue   {this.hours()}, </div>
-                  <div className="hours-day"> Wed   {this.hours()}, </div>
-                  <div className="hours-day"> Thu   {this.hours()}, </div>
-                  <div className="hours-day"> Fri   {this.hours()}, </div>
-                  <div className="hours-day"> Sat   {this.hours()} </div>
-                </div>
-                <div className="bus-body-links">
-                  
+              <div className="business-body-main">
+                <div className="bus-loc-hours">
+                  <h4 className="loc-hours-title">Location & Hours</h4>
+                  <div className="business-body-hours">
+                    <div className="hours-day"> Sun {this.hours()}, </div>
+                    <div className="hours-day"> Mon {this.hours()}, </div>
+                    <div className="hours-day"> Tue {this.hours()}, </div>
+                    <div className="hours-day"> Wed {this.hours()}, </div>
+                    <div className="hours-day"> Thu {this.hours()}, </div>
+                    <div className="hours-day"> Fri {this.hours()}, </div>
+                    <div className="hours-day"> Sat {this.hours()} </div>
+                  </div>
+                  <div className="bus-body-links"></div>
                 </div>
               </div>
+              <div className="business-body-reviews"></div>
             </div>
-            <div className="business-body-reviews"></div>
           </div>
-        </div>
-      );
+        );
+      }
     }
   }
 }

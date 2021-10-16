@@ -24,7 +24,7 @@ const Splash = ({ businesses, fetchBusinesses }) => {
     fetchBusinesses().then((data) => {
       setBusinesses(businessList.concat(Object.values(data.businesses)));
     });
-  }, businessList);
+  }, []);
 
   const randomBusinesses = () => {
     let random = [];
