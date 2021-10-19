@@ -1,0 +1,26 @@
+.review-business-header {
+  font-weight: 900;
+  font-size: 24px;
+  color: rgba(43,39,60,1);
+  line-height: 36px;
+}
+
+.message-body {
+  border: none;
+  cursor: text;
+  resize: none;
+}
+
+.review-message-wrapper {
+  border: 1px solid #bbbac0;
+  max-width: 448px;
+  max-height: 324px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.review-form-container {
+  padding: 0 15px;
+}

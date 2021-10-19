@@ -54,7 +54,12 @@ class ReviewForm extends Component {
           <h1 className="review-business-header">{business.name}</h1>
           <form onSubmit={this.handleSubmit} className="review-form">
             <div className="review-message-wrapper">
-              <textarea cols="30" rows="10" className="message-body"></textarea>
+              <textarea 
+              cols="60" 
+              rows="20" 
+              className="message-body" 
+              placeholder="This store is great/horrible! I sure did love/hate the way they treated me. Such a neat/dissapointing game store! I would absolutely/never recommend this business to a friend..."
+              ></textarea>
             </div>
           </form>
         </div>
