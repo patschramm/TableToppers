@@ -102,3 +102,36 @@
   color: rgba(43,39,60,1);
   font-size: 20px;
 }
+
+.create-review-button {
+  width: 154px;
+  height: 22px;
+  padding: 8px 16px;
+  background-color: #23d3d3;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a > #button-star {
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.business-body-review-button {
+  padding-top: 16px;
+}
+
+.business-body {
+  width: 1144px;
+  padding: 0 64px;
+  margin: 0 auto;
+}

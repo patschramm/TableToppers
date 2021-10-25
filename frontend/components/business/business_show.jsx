@@ -208,18 +208,19 @@ class BusinessShow extends React.Component {
             </div>
             <div className="business-body">
               <div className="business-body-review-button">
-                
-                {this.props.user ? <Link
-                  to={`/businesses/${this.props.business.id}/createreview`}
-                  className="create-review-button"
-                >
-                  Write a Review
-                </Link> : null}
-              </div>
-              <div className="business-body-cats">
-                <span className="dollar-sign">
-                  {this.props.business.price_range}
-                </span>
+                {this.props.user ? (
+                  <Link
+                    to={`/businesses/${this.props.business.id}/createreview`}
+                    className="create-review-button"
+                  >
+                    <i
+                      id="button-star"
+                      className="fas fa-star"
+                      aria-hidden="true"
+                    ></i>
+                    Write a Review
+                  </Link>
+                ) : null}
               </div>
               <div className="business-body-main">
                 <div className="bus-loc-hours">
