@@ -139,10 +139,13 @@ class BusinessShow extends React.Component {
       } else {
         let sum = 0;
         let avg = 0;
-        for (let i = 0; i < this.props.business.reviews.length; i++) {
-          sum += this.props.business.reviews[i].rating;
+
+        for (let key in this.props.business.reviews) {
+          let rating = this.props.business.reviews[key].rating;
+          sum += rating;
         }
-        avg = sum / this.props.business.reviews.length;
+        let length = Object.keys(this.props.business.reviews).length;
+        avg = sum / length;
         rating = avg.toFixed(2);
       }
       if (rating > 4.9) {
@@ -205,12 +208,13 @@ class BusinessShow extends React.Component {
             </div>
             <div className="business-body">
               <div className="business-body-review-button">
-                <Link
+                
+                {this.props.user ? <Link
                   to={`/businesses/${this.props.business.id}/createreview`}
                   className="create-review-button"
                 >
                   Write a Review
-                </Link>
+                </Link> : null}
               </div>
               <div className="business-body-cats">
                 <span className="dollar-sign">

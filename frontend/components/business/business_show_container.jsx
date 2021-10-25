@@ -5,7 +5,7 @@ import BusinessShow from './business_show'
 const mSTP = ({ session, entities: { businesses } }, ownProps) => {
   return {
     business: businesses[ownProps.match.params.id],
-
+    user: session.id,
   };
 };
 

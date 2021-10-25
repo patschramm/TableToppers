@@ -23,8 +23,9 @@
   
 }
 
-.review-form-container {
-  padding: 0 15px;
+.review-wrapper {
+  margin: 0 auto;
+  width: 990px;
 }
 
 .review-form-navbar {
@@ -35,6 +36,7 @@
   border: 1px solid #bbbac0;
   padding: 24px;
   width: 625px;
+  border-radius: 4px;
 }
 
 .review-business-header-wrapper {
