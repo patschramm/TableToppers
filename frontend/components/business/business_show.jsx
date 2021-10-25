@@ -131,6 +131,8 @@ class BusinessShow extends React.Component {
       return null;
     } else {
       console.log("in render", this.props.business)
+      let url = `http://maps.google.com/?q=${this.props.business.address}`;
+      let phone = '(' + this.props.business.phone.slice(0, 3) + ') ' + this.props.business.phone.slice(3, 6) + '-' + this.props.business.phone.slice(6);
       let rating = 0;
       if (!this.props.business.reviews) {
         rating = (5.0).toFixed(2);
@@ -203,7 +205,10 @@ class BusinessShow extends React.Component {
             </div>
             <div className="business-body">
               <div className="business-body-review-button">
-                <Link to={`/businesses/${this.props.business.id}/createreview`} className="create-review-button">
+                <Link
+                  to={`/businesses/${this.props.business.id}/createreview`}
+                  className="create-review-button"
+                >
                   Write a Review
                 </Link>
               </div>
@@ -224,11 +229,66 @@ class BusinessShow extends React.Component {
                     <div className="hours-day"> Fri {this.hours()}, </div>
                     <div className="hours-day"> Sat {this.hours()} </div>
                   </div>
-                  <div className="bus-body-links"></div>
+                  <div className="bus-body-info">
+                    <ul>
+                      <li>
+                        <p className="side-info-phone">{phone}</p>
+                        <i className="fas fa-phone-volume"></i>
+                      </li>
+                      <li>
+                        <a
+                          className="side-info"
+                          href={"http://" + this.props.business.website}
+                          target="_blank"
+                        >
+                          {this.props.business.website}
+                        </a>
+                        <i className="fas fa-external-link-square-alt"></i>
+                      </li>
+                      <li>
+                        <div className="side-info-dir">
+                          <a href={url} target="_blank">
+                            {" "}
+                            Get Directions{" "}
+                          </a>
+                          <p className="side-info-address">
+                            {this.props.business.address},{" "}
+                            {this.props.business.city},{" "}
+                            {this.props.business.state}{" "}
+                            {this.props.business.zip_code}
+                          </p>
+                        </div>
+                        <i className="fas fa-directions"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div className="business-body-reviews"></div>
             </div>
+            <footer>
+              <div className="mylinks">
+                <p className="about-user-title">About</p>
+                <a
+                  href="https://www.linkedin.com/in/patrick-schramm-a54426216/"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
+                <a href="https://github.com/patschramm" target="_blank">
+                  {" "}
+                  Git Hub
+                </a>
+                <a href="https://angel.co/u/patrick-schramm-2" target="_blank">
+                  {" "}
+                  Angel List
+                </a>
+                <a href="" target="_blank">
+                  {" "}
+                  About Me
+                </a>
+              </div>
+            </footer>
           </div>
         );
       }

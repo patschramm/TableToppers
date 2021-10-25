@@ -3,24 +3,53 @@
   font-size: 24px;
   color: rgba(43,39,60,1);
   line-height: 36px;
+  text-decoration: none;
+  box-sizing: border-box;
+
 }
 
 .message-body {
   border: none;
   cursor: text;
   resize: none;
+  font-size: 16px;
 }
 
 .review-message-wrapper {
-  border: 1px solid #bbbac0;
-  max-width: 448px;
-  max-height: 324px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  margin: 12px 0;
   
 }
 
 .review-form-container {
   padding: 0 15px;
+}
+
+.review-form-navbar {
+  border-bottom: 1px solid #eeeeef;
+}
+
+.review-form-wrapper {
+  border: 1px solid #bbbac0;
+  padding: 24px;
+  width: 625px;
+}
+
+.review-business-header-wrapper {
+  padding: 24px 0;
+}
+
+.review-form-submit {
+  border: none;
+  height: 40px;
+  width: 200px;
+  background-color: #23d3d3;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 32px;
 }

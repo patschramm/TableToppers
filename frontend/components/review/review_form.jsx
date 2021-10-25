@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Rating from "react-simple-star-rating";
+import { Link } from "react-router-dom";
+import { Rating } from "react-simple-star-rating";
+import NavbarContainer from "../navbar/navbar_container"
 
 
 class ReviewForm extends Component {
@@ -11,6 +13,8 @@ class ReviewForm extends Component {
       business_id: null,
       user_id: this.props.currentUser
     };
+    this.handleRating = this.handleRating.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // businessExists(id) {
@@ -41,6 +45,15 @@ class ReviewForm extends Component {
     }
   };
 
+  handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  handleRating(n) {
+    let rating = {rating:n};
+    this.setState(rating);
+  }
+
   render() { 
     console.log("this a thing", this.state)
 
@@ -51,16 +64,32 @@ class ReviewForm extends Component {
   
       return ( 
         <div className="review-form-container">
-          <h1 className="review-business-header">{business.name}</h1>
+          <nav className="review-form-navbar"><NavbarContainer /></nav>
+          <div className="review-business-header-wrapper">
+            <Link to={`/businesses/${business.id}`} className="review-business-header">{business.name}</Link>
+          </div>
           <form onSubmit={this.handleSubmit} className="review-form">
-            <div className="review-message-wrapper">
-              <textarea 
-              cols="60" 
-              rows="20" 
-              className="message-body" 
-              placeholder="This store is great/horrible! I sure did love/hate the way they treated me. Such a neat/dissapointing game store! I would absolutely/never recommend this business to a friend..."
-              ></textarea>
+            <div className="review-form-wrapper">
+              <div className="review-rating-wrapper">
+                <Rating 
+                  onClick={this.handleRating}
+                  ratingValue={this.state.rating}
+                  size={24}
+                  fillColor="#23d3d3"
+                  emptyColor="gray"
+                  className="review-rating"
+                />
+              </div>
+              <div className="review-message-wrapper">
+                <textarea 
+                cols="60" 
+                rows="20" 
+                className="message-body" 
+                placeholder="This store is great/horrible! I sure did love/hate the way they treated me. Such a neat/dissapointing game store! I would absolutely/never recommend this business to a friend..."
+                ></textarea>
+              </div>
             </div>
+            <button className="review-form-submit" type="submit">Post Review</button>
           </form>
         </div>
        );
