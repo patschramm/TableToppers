@@ -34,7 +34,7 @@
 }
 
 .personal-welcome {
-  color: white;
+  color: black;
 }
 // login and signup form containers MOVE LATER
 
@@ -71,6 +71,16 @@
   width: 292px;
   height: 25px;
   margin-bottom: 10px;
+}
+
+.logout-bttn button {
+  color: white;
+  background-color: #23d3d3;
+  cursor: pointer;
+}
+
+.logout-bttn {
+  align-items: flex-end;
 }
 
 .session-submit {
@@ -160,8 +170,8 @@
 }
 
 .normal-nav button {
-    border-left: none;
     color: white;
+    background-color: #23d3d3;
 }
 
 .normal-nav .logo {
