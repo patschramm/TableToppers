@@ -101,6 +101,8 @@
   font-weight: bold;
   color: rgba(43,39,60,1);
   font-size: 20px;
+  padding-top: 36px;
+  padding-bottom: 12px;
 }
 
 .create-review-button {
@@ -134,4 +136,80 @@ a > #button-star {
   width: 1144px;
   padding: 0 64px;
   margin: 0 auto;
+}
+
+.bus-body-info {
+  margin: 30px 0px 750px 0px;
+  width: 300px;
+  height: 200px;
+}
+
+.bus-body-info ul {
+  position: sticky;
+  top: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 0px 0px 0px 10px;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+}
+.bus-body-info ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px lightgray;
+  align-items: center;
+}
+.bus-body-info ul li:last-child {
+
+  border-bottom: none
+}
+
+.side-info {
+  color: #00838f;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-overflow: ellipsis;
+}
+
+.side-info-dir {
+  margin-top: 10px;
+}
+.side-info-dir a{
+  color: #00838f;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.side-info-phone {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+.side-info-address {
+  color: gray;
+  margin: 5px 0px 0px 0px;
+}
+.side-info a {
+  color: #00838f;
+  text-decoration: none;
+  text-overflow: clip;
+}
+.side-info:hover, .side-info-dir a:hover{
+  text-decoration: underline;
+}
+
+.bus-loc-hours-info {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width: 900px;
+  justify-content: space-evenly;
+}
+
+.bus-loc-hours-wrapper {
+  box-sizing: border-box;
 }

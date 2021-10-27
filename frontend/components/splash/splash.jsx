@@ -69,14 +69,43 @@ const Splash = ({ businesses, fetchBusinesses }) => {
           <h1>Hot & New Businesses</h1>
           <div className="hot-splash-wrapper">
             {randBus.map((business, i) => {
-              return <BusinessSplash key={`business-${i}`} business={business} />;
+              return (
+                <BusinessSplash key={`business-${i}`} business={business} />
+              );
             })}
           </div>
         </div>
-
-        {/* <footer>
-          <Footer />
-        </footer> */}
+        <div>
+          <footer>
+            <div className="footer-links">
+              <p className="about-user-title">About</p>
+              <a
+                href="https://www.linkedin.com/in/patrick-schramm-a54426216/"
+                target="_blank"
+              >
+                Linkedin
+              </a>
+              <a href="https://github.com/patschramm" target="_blank">
+                {" "}
+                Git Hub
+              </a>
+              <a href="https://angel.co/u/patrick-schramm-2" target="_blank">
+                {" "}
+                Angel List
+              </a>
+              <a href="" target="_blank">
+                {" "}
+                About Me
+              </a>
+            </div>
+            <img
+              src={
+                "https://tabletoppers-dev.s3.us-west-2.amazonaws.com/footer/footer.png"
+              }
+              alt=""
+            />
+          </footer>
+        </div>
       </>
     );
   }

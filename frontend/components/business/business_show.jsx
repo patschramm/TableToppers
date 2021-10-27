@@ -223,16 +223,18 @@ class BusinessShow extends React.Component {
                 ) : null}
               </div>
               <div className="business-body-main">
-                <div className="bus-loc-hours">
-                  <h4 className="loc-hours-title">Location & Hours</h4>
-                  <div className="business-body-hours">
-                    <div className="hours-day"> Sun {this.hours()}, </div>
-                    <div className="hours-day"> Mon {this.hours()}, </div>
-                    <div className="hours-day"> Tue {this.hours()}, </div>
-                    <div className="hours-day"> Wed {this.hours()}, </div>
-                    <div className="hours-day"> Thu {this.hours()}, </div>
-                    <div className="hours-day"> Fri {this.hours()}, </div>
-                    <div className="hours-day"> Sat {this.hours()} </div>
+                <div className="bus-loc-hours-info">
+                  <div className="bus-loc-hours-wrapper">
+                    <h4 className="loc-hours-title">Business Hours</h4>
+                    <div className="business-body-hours">
+                      <div className="hours-day"> Sun {this.hours()}, </div>
+                      <div className="hours-day"> Mon {this.hours()}, </div>
+                      <div className="hours-day"> Tue {this.hours()}, </div>
+                      <div className="hours-day"> Wed {this.hours()}, </div>
+                      <div className="hours-day"> Thu {this.hours()}, </div>
+                      <div className="hours-day"> Fri {this.hours()}, </div>
+                      <div className="hours-day"> Sat {this.hours()} </div>
+                    </div>
                   </div>
                   <div className="bus-body-info">
                     <ul>
@@ -272,7 +274,7 @@ class BusinessShow extends React.Component {
               <div className="business-body-reviews"></div>
             </div>
             <footer>
-              <div className="mylinks">
+              <div className="footer-links">
                 <p className="about-user-title">About</p>
                 <a
                   href="https://www.linkedin.com/in/patrick-schramm-a54426216/"
@@ -293,6 +295,12 @@ class BusinessShow extends React.Component {
                   About Me
                 </a>
               </div>
+              <img
+                src={
+                  "https://tabletoppers-dev.s3.us-west-2.amazonaws.com/footer/footer.png"
+                }
+                alt=""
+              />
             </footer>
           </div>
         );
