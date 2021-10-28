@@ -54,7 +54,11 @@ const Splash = ({ businesses, fetchBusinesses }) => {
           </div>
           <h1>
             <a href="/" className="splash-title">
-              TableToppers
+              <img
+                src="https://tabletoppers-dev.s3.us-west-2.amazonaws.com/logos/tt-letters-black.png"
+                alt=""
+                className="splash-letter-logo"
+              />
             </a>
           </h1>
           <Search />
