@@ -1,0 +1,46 @@
+.review-stars .fa-star {
+  font-size: 12px;
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  // align-items: center;
+  padding: 0;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1px;
+}
+
+.review-stars > p {
+  display: flex;
+  margin-right: 12px;
+}
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-date {
+  font-size: 12px;
+}
+
+.review-message {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.review-username {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.user-info {
+  display: flex;
+  padding: 12px 0;
+}
+
+
+

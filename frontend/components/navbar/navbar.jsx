@@ -30,7 +30,13 @@ const Navbar = ({ currentUser, logout, location }) => {
 
   const normalNavBar = () => (
     <nav className="normal-nav nav-bar">
-      <Link to="/" className="logo">TableToppers</Link>
+      <Link to="/" className="logo">
+        <img
+          src="https://tabletoppers-dev.s3.us-west-2.amazonaws.com/logos/tt-logo-black.png"
+          alt=""
+          className="nav-logo-image"
+        />
+      </Link>
       <Search />
       {currentUser ? logout_bttn() : login_links()}
     </nav>
