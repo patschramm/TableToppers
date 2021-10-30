@@ -73,7 +73,7 @@ class ReviewShow extends React.Component {
     return (
       <div className="review-show">
         <div className="user-info">
-          <i id="profile-pic" className="far fa-user"></i>
+          <i id="review-profile-pic" className="far fa-user"></i>
           <div className="review-username">
             {this.props.review.username}
           </div>

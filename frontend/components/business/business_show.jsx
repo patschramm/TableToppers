@@ -148,22 +148,23 @@ class BusinessShow extends React.Component {
         let length = Object.keys(this.props.business.reviews).length;
         avg = sum / length;
         rating = avg.toFixed(2);
+        console.log({rating})
       }
       if (rating > 4.9) {
         this.avgStar = this.fiveStar;
-      } else if (rating > 4.4 && rating <= 4.9) {
+      } else if (rating >= 4.5 && rating <= 4.9) {
         this.avgStar = this.fourHalfStar;
-      } else if (rating >= 4.0 && rating <= 4.4) {
+      } else if (rating >= 4.0 && rating < 4.5) {
         this.avgStar = this.fourStar;
-      } else if (rating > 3.5 && rating < 4) {
+      } else if (rating >= 3.5 && rating < 4) {
         this.avgStar = this.threeHalfStar;
-      } else if (rating >= 3 && rating <= 3.5) {
+      } else if (rating >= 3 && rating < 3.5) {
         this.avgStar = this.threeStar;
-      } else if (rating > 2.5 && rating < 3) {
+      } else if (rating >= 2.5 && rating < 3) {
         this.avgStar = this.twoHalfStar;
-      } else if (rating >= 2 && rating <= 2.5) {
+      } else if (rating >= 2 && rating < 2.5) {
         this.avgStar = this.twoStar;
-      } else if (rating > 1.5 && rating < 2) {
+      } else if (rating >= 1.5 && rating < 2) {
         this.avgStar = this.oneHalfStar;
       } else {
         this.avgStar = this.oneStar;

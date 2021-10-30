@@ -136,16 +136,18 @@ a > #button-star {
   width: 1144px;
   padding: 0 64px;
   margin: 0 auto;
+  position: relative;
 }
 
 .bus-body-info {
   margin: 30px 0px 750px 0px;
   width: 300px;
   height: 200px;
+  position: sticky;
+  top: 20px;
 }
 
 .bus-body-info ul {
-  position: sticky;
   top: 100px;
   width: 300px;
   padding: 10px;
@@ -207,8 +209,15 @@ a > #button-star {
   flex-direction: row;
   height: 300px;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .bus-loc-hours-wrapper {
   box-sizing: border-box;
+}
+
+.business-body-reviews > h2 {
+  font-size: 20px;
+  padding-bottom: 12px;
+  font-weight: bold;
 }
