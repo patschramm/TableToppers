@@ -7,20 +7,23 @@ class ReviewsIndex extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    this.props.fetchReviews(this.props.business.id);
-  }
+  // componentDidMount() {
+  //   this.props.fetchReviews(this.props.business.id);
+  // }
 
-  componentDidUpdate() {
-    if (
-      this.props.business.reviews.length !==
-      Object.keys(this.props.reviews).length
-    ) {
-      this.props.fetchReviews(this.props.business.id);
-    }
-  }
+  // componentDidUpdate() {
+  //   console.log("review", this.props.reviews
+  //   )
+  //   if (
+  //     this.props.business.reviews.length !==
+  //     Object.keys(this.props.reviews).length
+  //   ) {
+  //     this.props.fetchReviews(this.props.business.id);
+  //   }
+  // }
 
   render() {
+    console.log(this.props.reviews)
     if (this.props.reviews) {
       return (
         <div className="reviews-container">

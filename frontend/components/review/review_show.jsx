@@ -75,16 +75,16 @@ class ReviewShow extends React.Component {
         <div className="user-info">
           <i id="profile-pic" className="far fa-user"></i>
           <div className="review-username">
-            {this.props.review.user.username}.
+            {this.props.review.username}
           </div>
         </div>
 
         <div className="review-show-body">
-          <div className="stars">
+          <div className="review-stars">
             {stars}
-            <p>{fullDate}</p>
+            <p className="review-date">{fullDate}</p>
           </div>
-          <p>{this.props.review.body}</p>
+          <p className="review-message">{this.props.review.message}</p>
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavbarContainer from "../navbar/navbar_container";
-import Reviews from "../review/review_index_container"
+import Reviews from "../review/review_index"
 
 {
   /* <span>{Array(Math.floor(business.rating)).fill(<MyStar></MyStar>)} </span>;
@@ -274,7 +274,7 @@ class BusinessShow extends React.Component {
               </div>
               <div className="business-body-reviews">
                 <h2>Recommended Reviews</h2>
-                <Reviews business={this.props.business.id} />
+                <Reviews reviews={this.props.business.reviews} />
               </div>
             </div>
             <footer>
