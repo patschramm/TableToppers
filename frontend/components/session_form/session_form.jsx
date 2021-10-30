@@ -121,7 +121,13 @@ class SessionForm extends React.Component {
         <>
           <header className="session-header">
             <h1 className="logo-header">
-              <a href="/"> TableToppers </a>
+              <a href="/">
+                <img
+                  src="https://tabletoppers-dev.s3.us-west-2.amazonaws.com/logos/tt-letters-black.png"
+                  alt=""
+                  className="session-logo-image"
+                />
+              </a>
             </h1>
           </header>
           <div className="signup-form-container">
