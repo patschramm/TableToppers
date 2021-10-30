@@ -17,6 +17,7 @@
 #
 class Review < ApplicationRecord
     validates :message, :rating, :business_id, :user_id, presence: true
+    validates_uniqueness_of :user_id, scope: :business_id
 
     belongs_to :user,
         foreign_key: :user_id,
