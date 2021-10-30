@@ -188,7 +188,10 @@ class BusinessShow extends React.Component {
                   <h1 className="business-header-title">
                     {this.props.business.name}
                   </h1>
-                  <div className="business-header-rating">{this.avgStar}</div>
+                  <div className="business-header-rating">
+                    {this.avgStar}
+                    {length} Reviews
+                  </div>
                   <div className="business-header-categories">
                     {/* {this.props.business.categories.map((category, i) => {
                       if (i !== this.props.business.categories.length - 1) {
