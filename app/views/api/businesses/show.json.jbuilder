@@ -13,7 +13,7 @@ json.partial! '/api/businesses/business', business: @business
     # json.users do
     #   json.set! review.user_id do
     #     json.extract! review.user, :id, :username
-    #   end
+    #   ende
     # end
   end
 
